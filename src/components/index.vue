@@ -4,7 +4,7 @@
       <Navmenu />
     </div>
     <div class="index-content">
-      <thetitle titleName="标题" />
+      <thetitle titleName="标题1" />
       <div>neir</div>
     </div>
   </div>
