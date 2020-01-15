@@ -2,15 +2,16 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../components/login.vue'
 import Index from '../components/index.vue'
-import Title from '../components/title.vue'
-import NavMenu from '../components/navMenu.vue'
-
+import Welcome from '../components/welcome.vue'
+import newMessage from '../components/newMessage.vue'
+import UserInfo from '../components/userInfo.vue'
 Vue.use(VueRouter)
 
 const routes = [
+
   {
     path: '/',
-    redirect: '/navMenu'
+    redirect: '/login'
   },
   {
     path: '/login',
@@ -18,15 +19,13 @@ const routes = [
   },
   {
     path: '/index',
-    component: Index
-  },
-  {
-    path: '/title',
-    component: Title
-  },
-  {
-    path: '/navMenu',
-    component: NavMenu
+    component: Index,
+    redirect: '/welcome',
+    children: [
+      { path: '/welcome', name: 'welcome', component: Welcome },
+      { path: '/newMessage', component: newMessage },
+      { path: '/userInfo', component: UserInfo }
+    ]
   }
 ]
 
