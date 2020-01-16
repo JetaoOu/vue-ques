@@ -23,7 +23,16 @@ export default {
       }
     }
   },
-  methods: {}
+  created() {
+    this.getDatas()
+  },
+  methods: {
+    getDatas() {
+      this.axios.get('/questionnaire/findAll.action').then(e => {
+        console.log(e.data)
+      })
+    }
+  }
 }
 </script>
 <style lang="less" scoped>

@@ -9,19 +9,19 @@
       </el-breadcrumb>
       <div>
         <!-- 卡片 -->
-        <el-card class="box-card">
+        <el-card class="box-card" shadow="never">
           <div slot="header" class="clearfix">
             <span>个人信息</span>
             <div>
-              <el-button type="primary" @click="edituser()">编辑</el-button>
-              <el-button type="primary" @click="commituser()">提交</el-button>
+              <el-button type="primary" :disabled="!editAble" @click="edituser()">编辑</el-button>
+              <el-button type="primary" :disabled="editAble" @click="commituser()">提交</el-button>
             </div>
           </div>
           <el-form ref="form" :model="form" label-width="80px">
             <div class="form-line">
               <!-- 姓名 -->
               <el-form-item label="姓名">
-                <el-input :readonly="editAble"  v-model="form.name"></el-input>
+                <el-input :readonly="editAble" v-model="form.name"></el-input>
               </el-form-item>
               <!-- 毕业年度 -->
               <el-form-item label="毕业年度">
@@ -29,7 +29,7 @@
               </el-form-item>
               <!-- 性别 -->
               <el-form-item label="性别">
-                <el-radio-group v-model="form.sex">
+                <el-radio-group :disabled="editAble" v-model="form.sex">
                   <el-radio label="男"></el-radio>
                   <el-radio label="女"></el-radio>
                 </el-radio-group>
@@ -57,7 +57,11 @@
             <label for>毕业后计划</label>
             <div class="form-line">
               <el-form-item>
-                <el-radio-group v-model="form.graduationPlan" @change="changePlane">
+                <el-radio-group
+                  :disabled="editAble"
+                  v-model="form.graduationPlan"
+                  @change="changePlane"
+                >
                   <el-radio label="求职"></el-radio>
                   <el-radio label="考研"></el-radio>
                   <el-radio label="出国"></el-radio>
@@ -67,6 +71,7 @@
               <el-form-item>
                 <el-input
                   :disabled="!vshow.elses"
+                  :readonly="editAble"
                   placeholder="毕业后计划"
                   v-model="form.graduationPlanSituationName1"
                 ></el-input>
@@ -77,7 +82,7 @@
               <label for>目前的求职情形为：</label>
               <div class="form-line">
                 <el-form-item>
-                  <el-radio-group v-model="form.graduationPlanSituation">
+                  <el-radio-group :disabled="editAble" v-model="form.graduationPlanSituation">
                     <el-radio label="进行中"></el-radio>
                     <el-radio label="已被录用"></el-radio>
                   </el-radio-group>
@@ -101,7 +106,7 @@
               <label for>目前的升学情形为：</label>
               <div class="form-line">
                 <el-form-item>
-                  <el-radio-group v-model="form.graduationPlanSituation">
+                  <el-radio-group :disabled="editAble" v-model="form.graduationPlanSituation">
                     <el-radio label="进行中"></el-radio>
                     <el-radio label="已被录用"></el-radio>
                   </el-radio-group>
@@ -125,7 +130,7 @@
               <label for>目前的出国情形为：</label>
               <div class="form-line">
                 <el-form-item>
-                  <el-radio-group v-model="form.graduationPlanSituation">
+                  <el-radio-group :disabled="editAble" v-model="form.graduationPlanSituation">
                     <el-radio label="进行中"></el-radio>
                     <el-radio label="已被录用"></el-radio>
                   </el-radio-group>
@@ -177,9 +182,9 @@ export default {
         email: '2366573895@qq.com',
         remark: 'ojt0513',
         graduationPlan: '求职', //  毕业后计划
-        graduationPlanSituation: '进行中', //   计划情形
-        graduationPlanSituationName1: '', //    单位名/学校名
-        graduationPlanSituationName2: '' // 岗位名/院系名
+        graduationPlanSituation: '已被录用', //   计划情形
+        graduationPlanSituationName1: '肇庆学院', //    单位名/学校名
+        graduationPlanSituationName2: '学生辅导员' // 岗位名/院系名
       }
     }
   },
