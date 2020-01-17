@@ -41,8 +41,8 @@
                 <span>消息</span>
               </template>
               <el-menu-item-group>
-                <el-menu-item index="/newMessage">新问卷</el-menu-item>
-                <el-menu-item index="/oldMessage">已结束问卷</el-menu-item>
+                <el-menu-item index="/newQuestionNaire">新问卷</el-menu-item>
+                <el-menu-item index="/oldQuestionNaire">已结束问卷</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
             <el-submenu index="3">

@@ -3,8 +3,9 @@ import VueRouter from 'vue-router'
 import Login from '../components/login.vue'
 import Index from '../components/index.vue'
 import Welcome from '../components/welcome.vue'
-import newMessage from '../components/newMessage.vue'
+import newQuestionNaire from '../components/newQuestionNaire.vue'
 import UserInfo from '../components/userInfo.vue'
+import Survey from '../components/questionNaireDetail.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -23,9 +24,14 @@ const routes = [
     redirect: '/welcome',
     children: [
       { path: '/welcome', name: 'welcome', component: Welcome },
-      { path: '/newMessage', component: newMessage },
+      { path: '/newQuestionNaire', component: newQuestionNaire },
       { path: '/userInfo', component: UserInfo }
     ]
+  },
+  {
+    path: '/survey',
+    name: 'survey',
+    component: Survey
   }
 ]
 
