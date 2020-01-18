@@ -21,8 +21,6 @@
             router
             class="el-menu-vertical-demo"
             background-color="#d3dce6"
-            @open="handleOpen"
-            @close="handleClose"
           >
             <!-- submenu -->
             <el-submenu index="1">
@@ -31,7 +29,7 @@
                 <span>首页</span>
               </template>
               <el-menu-item-group>
-                <el-menu-item index="/index1">选项1</el-menu-item>
+                <el-menu-item index="/welcome">选项1</el-menu-item>
                 <el-menu-item index="/index2">选项2</el-menu-item>
               </el-menu-item-group>
             </el-submenu>

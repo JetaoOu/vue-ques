@@ -8,9 +8,10 @@ import './plugins/element.js'
 import './assets/global.css'
 import './assets/fonts/iconfont.css'
 import axios from 'axios'
-import VueAxios from 'vue-axios'
-axios.defaults.baseURL = 'http://www.waixingren.online'
-Vue.use(VueAxios, axios)
+// import VueAxios from 'vue-axios'
+axios.defaults.baseURL = '/api'
+Vue.prototype.$http = axios
+// Vue.use(VueAxios, axios)
 
 Vue.use(ElementUI)
 
