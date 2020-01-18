@@ -5,7 +5,7 @@
       <el-header>
         <div>
           <img src="../assets/logo.png" alt="图标" />
-          <span>今天是个好日子</span>
+          <span>问卷调查系统</span>
         </div>
         <div>
           <img src="../assets/logo.png" alt="个人头像" />

@@ -43,7 +43,7 @@
                     <img class="image" src="../assets/guanlian.png" alt />
                   </template>
                   <template slot-scope="scope">
-                    <el-radio-group v-model="scope.row.id">
+                    <el-radio-group v-model="scope.row.id1">
                       <el-tooltip :content="texts[0]" placement="top" effect="light">
                         <el-radio label="5">5</el-radio>
                       </el-tooltip>
@@ -97,6 +97,7 @@ export default {
       list: [
         {
           id: 0,
+          id1: '',
           title:
             '1.人文社会科学素养、良好职业规范：\n具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
           content:
@@ -108,7 +109,9 @@ export default {
         },
         {
           id: 1,
-          title: '2.人文社会科学素养、良好职业规范：',
+          id1: '',
+          title:
+            '1.人文社会科学素养、良好职业规范：\n具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
           content:
             '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
           shadow: true,
@@ -118,7 +121,9 @@ export default {
         },
         {
           id: 2,
-          title: '3.人文社会科学素养、良好职业规范：',
+          id1: '',
+          title:
+            '1.人文社会科学素养、良好职业规范：\n具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
           content:
             '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
           shadow: true,
@@ -127,8 +132,10 @@ export default {
           thumbnail: 'https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png'
         },
         {
-          id: 1,
-          title: '2.人文社会科学素养、良好职业规范：',
+          id: 3,
+          id1: '',
+          title:
+            '1.人文社会科学素养、良好职业规范：\n具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
           content:
             '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
           shadow: true,
@@ -137,8 +144,10 @@ export default {
           thumbnail: 'https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png'
         },
         {
-          id: 2,
-          title: '3.人文社会科学素养、良好职业规范：',
+          id: 4,
+          id1: '',
+          title:
+            '1.人文社会科学素养、良好职业规范：\n具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
           content:
             '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
           shadow: true,
@@ -147,8 +156,10 @@ export default {
           thumbnail: 'https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png'
         },
         {
-          id: 1,
-          title: '2.人文社会科学素养、良好职业规范：',
+          id: 5,
+          id1: '',
+          title:
+            '1.人文社会科学素养、良好职业规范：\n具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
           content:
             '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
           shadow: true,
@@ -157,108 +168,10 @@ export default {
           thumbnail: 'https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png'
         },
         {
-          id: 2,
-          title: '3.人文社会科学素养、良好职业规范：',
-          content:
-            '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
-          shadow: true,
-          note: 'Tips',
-          extra: '额外信息',
-          thumbnail: 'https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png'
-        },
-        {
-          id: 1,
-          title: '2.人文社会科学素养、良好职业规范：',
-          content:
-            '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
-          shadow: true,
-          note: 'Tips',
-          extra: '额外信息',
-          thumbnail: 'https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png'
-        },
-        {
-          id: 2,
-          title: '3.人文社会科学素养、良好职业规范：',
-          content:
-            '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
-          shadow: true,
-          note: 'Tips',
-          extra: '额外信息',
-          thumbnail: 'https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png'
-        },
-        {
-          id: 1,
-          title: '2.人文社会科学素养、良好职业规范：',
-          content:
-            '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
-          shadow: true,
-          note: 'Tips',
-          extra: '额外信息',
-          thumbnail: 'https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png'
-        },
-        {
-          id: 2,
-          title: '3.人文社会科学素养、良好职业规范：',
-          content:
-            '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
-          shadow: true,
-          note: 'Tips',
-          extra: '额外信息',
-          thumbnail: 'https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png'
-        },
-        {
-          id: 1,
-          title: '2.人文社会科学素养、良好职业规范：',
-          content:
-            '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
-          shadow: true,
-          note: 'Tips',
-          extra: '额外信息',
-          thumbnail: 'https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png'
-        },
-        {
-          id: 2,
-          title: '3.人文社会科学素养、良好职业规范：',
-          content:
-            '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
-          shadow: true,
-          note: 'Tips',
-          extra: '额外信息',
-          thumbnail: 'https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png'
-        },
-        {
-          id: 1,
-          title: '2.人文社会科学素养、良好职业规范：',
-          content:
-            '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
-          shadow: true,
-          note: 'Tips',
-          extra: '额外信息',
-          thumbnail: 'https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png'
-        },
-        {
-          id: 2,
-          title: '3.人文社会科学素养、良好职业规范：',
-          content:
-            '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
-          shadow: true,
-          note: 'Tips',
-          extra: '额外信息',
-          thumbnail: 'https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png'
-        },
-        {
-          id: 1,
-          title: '2.人文社会科学素养、良好职业规范：',
-          content:
-            '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
-          shadow: true,
-          note: 'Tips',
-          extra: '额外信息',
-          thumbnail: 'https://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png'
-        },
-        {
-          id: 2,
-          title: '3.人文社会科学素养、良好职业规范：',
+          id: 6,
+          id1: '',
+          title:
+            '1.人文社会科学素养、良好职业规范：\n具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
           content:
             '具有人文社会科学素养，社会责任感强，能够在计算机应用工程实践中理解并遵守工程职业道德和规范，履行责任。',
           shadow: true,
@@ -285,11 +198,6 @@ export default {
       this.$alert('您确定提交问卷吗？', '提交', {
         confirmButtonText: '确定',
         callback: action => {
-          this.$message({
-            duration: 1000,
-            type: 'info',
-            message: this.list
-          })
           this.$router.push('/newQuestionNaire')
         }
       })
@@ -324,6 +232,7 @@ export default {
   margin: 10px;
 }
 .ques-title {
+  width: 80%;
   margin-top: 60px;
   font-size: 40px;
   margin-left: 300px;
