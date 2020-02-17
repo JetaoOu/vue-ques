@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     getDatas() {
-      this.axios.get('/questionnaire/findAll.action').then(e => {
+      this.$http.get('/questionnaire/findAll.action').then(e => {
         console.log(e.data)
       })
     },

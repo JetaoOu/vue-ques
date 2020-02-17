@@ -9,7 +9,7 @@ module.exports = {
                  */
         open: true, //浏览器自动打开页面
         host: "localhost", //本地服务器访问的路径
-        port: 8080, //本地服务器访问的端口
+        port: 8088, //本地服务器访问的端口
 
         /**
          * vue-cli3跨域的全配置！
@@ -27,15 +27,9 @@ module.exports = {
                 //同一个域名只能设置一次跨域，否则重复报错！
                 target: 'http://www.waixingren.online',
                 changeOrigin: true, //是否跨域，设置为true;(必须)
-                /* 对应的axios路径设置：
-                axios.get( "/article/d4666d640e2e478d283d8c7f.htm" )
-                    .then( function ( response ) {
-                        console.log( response.data );
-                    } )
-                    .catch( function ( error ) {
-                        throw error;
-                    } );
-                */
+                pathRewrite:{
+                    '^/api': ''
+                  }
             }
         }
     }
