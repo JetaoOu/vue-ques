@@ -20,11 +20,12 @@
           <el-table-column prop="title" label="标题" width="180" align="center"></el-table-column>
           <el-table-column prop="author" label="作者" align="center"></el-table-column>
           <el-table-column prop="savetime" label="发布时间" align="center"></el-table-column>
-          <el-table-column label="操作" width="160px" align="center">
+          <el-table-column prop="changetime" label="结束时间" align="center"></el-table-column>
+         <!-- <el-table-column label="操作" width="160px" align="center">
             <template slot-scope="scope">
               <el-button @click="onclick(scope.row)" type="primary" plain size="small">立即填写</el-button>
             </template>
-          </el-table-column>
+          </el-table-column>-->
         </el-table>
       </el-card>
     </div>
@@ -45,7 +46,7 @@
     export default {
         data() {
             return {
-                currentPage:0,
+                currentPage: 0,
                 pageSize: 4,
                 pageTotal: 100,
                 form: []
@@ -57,21 +58,21 @@
         methods: {
             //获取问卷列表数据
             getQuesListData() {
-                this.$http.get('/questionnaire/findNew.action',{
-                    params:{
-                        userId:'1246494ff265415998a6320117b3b810'
+                this.$http.get('/questionnaire/findAll.action', {
+                    params: {
+                        status: '已结束'
                     }
                 }).then(e => {
                     this.form = e.data
                 })
             },
             onclick(row) {
-                this.$router.push({
+                /*this.$router.push({
                     name: 'survey',
                     params: {
                         ques: row
                     }
-                })
+                })*/
             },
             //分页插件回调
             handleSizeChange(val) {

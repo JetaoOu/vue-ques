@@ -4,6 +4,8 @@ import Login from '../components/login.vue'
 import Index from '../components/index.vue'
 import Welcome from '../components/welcome.vue'
 import newQuestionNaire from '../components/newQuestionNaire.vue'
+import abortQuestionNaire from '../components/abortQuestionNaire.vue'
+import didQuestionNaire from '../components/didQuestionNaire.vue'
 import UserInfo from '../components/userInfo.vue'
 import Survey from '../components/questionNaireDetail.vue'
 Vue.use(VueRouter)
@@ -25,6 +27,8 @@ const routes = [
     children: [
       { path: '/welcome', name: 'welcome', component: Welcome },
       { path: '/newQuestionNaire', component: newQuestionNaire },
+      { path: '/abortQuestionNaire', component: abortQuestionNaire },
+      { path: '/didQuestionNaire', component: didQuestionNaire },
       { path: '/userInfo', component: UserInfo }
     ]
   },
